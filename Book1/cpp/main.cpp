@@ -3,8 +3,8 @@
 using namespace std;
 
 // ---< include : original >----
-#include<BookGenerator.hpp>
-#include<Book.hpp>
+#include<hpp/BookManager.hpp>
+#include<hpp/Book.hpp>
 
 // ========================
 //  main
@@ -12,14 +12,17 @@ using namespace std;
 void main(){
   int bookNumber;
 
-  cout << "本の構造を出力します。どの本にしますか？";
-  cout << "1: フィラルテの鑑";
-  cin >> bookNumber;
-  
-  BookGenerator bookGenerator = new BookGenerator();
-  Book book = bookGenerator.generate(bookNumber);
-  
-  book.play();
-  
+  while(true){
+    cout << "本の構造を出力します。どの本にしますか？";
+    cout << "1: フィラルテの鑑";
+    cin >> bookNumber;
+
+    if(bookNumber < 0) break;
+    
+    BookManager::getInstance().ChangeBook( (BookManager::EBook) bookNumber );
+    
+    BookManager::getInstance().Play();
+  }
+    
   return;
 }

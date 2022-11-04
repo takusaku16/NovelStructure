@@ -1,8 +1,8 @@
-#include<Book.hpp>
+#include<hpp/Book.hpp>
 
-void Book::play(){
-  for (int episordNumber = 0; episordNumber < Book.EPISORD_NUM_MAX; episordNumber++) {
-    Episord episord = new Episord(episordNumber);
-    episord.play();
-  }
-}
+// void Book::play(){
+//   for (int episodeNumber = 0; episodeNumber < Book.EPISOde_NUM_MAX; episodeNumber++) {
+//     Episode episode = new Episode(episodeNumber);
+//     episode.play();
+//   }
+// }
