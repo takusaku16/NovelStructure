@@ -16,11 +16,9 @@ void main(){
     cout << "本の構造を出力します。どの本にしますか？";
     cout << "1: フィラルテの鑑";
     cin >> bookNumber;
-
     if(bookNumber < 0) break;
     
-    BookManager::getInstance().ChangeBook( (BookManager::EBook) bookNumber );
-    
+    BookManager::getInstance().ChangeBook( (BookManager::EBook) bookNumber ); 
     BookManager::getInstance().Play();
   }
     

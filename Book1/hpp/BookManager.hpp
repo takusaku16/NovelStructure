@@ -15,8 +15,9 @@ class BookManager {
       FIRARUTE,
     };
 
-    Book *GetCurrentBookPointer(){return m_pBook;};
+    // Book *GetCurrentBookPointer(){return m_pBook;};
 
     void ChangeBook(EBook book);
-    void Play();
+
+    void Play(){m_pBook->Play();};
 };
