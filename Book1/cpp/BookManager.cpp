@@ -1,9 +1,9 @@
 #include<hpp/BookManager.hpp>
 
-void BookManager::ChangeBook(EBook book){
+void BookManager::ChangeBook(EBook eBook){
   static FiraruteBook firaruteBook;
 
-  switch(book){
+  switch(eBook){
 
     case FIRARUTE: m_pBook = &firaruteBook; break;
 

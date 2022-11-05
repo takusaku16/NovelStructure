@@ -17,7 +17,7 @@ class BookManager {
 
     // Book *GetCurrentBookPointer(){return m_pBook;};
 
-    void ChangeBook(EBook book);
+    void ChangeBook(EBook eBook);
 
     void Play(){m_pBook->Play();};
 };
